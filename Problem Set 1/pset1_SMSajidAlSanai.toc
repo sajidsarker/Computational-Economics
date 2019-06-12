@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Infinite Horizon Ramsey Model}{2}
+\contentsline {subsection}{\numberline {1.1}Value Function Approximation}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Bellman Equation}{2}
+\contentsline {subsubsection}{\numberline {1.1.2}Value Function Iteration}{3}
+\contentsline {subsection}{\numberline {1.2}Customised Value Function Approximation}{4}
+\contentsline {subsubsection}{\numberline {1.2.1}Using Iteration}{4}
+\contentsline {subsubsection}{\numberline {1.2.2}Using Analytical Form}{5}
+\contentsline {section}{\numberline {2}Rust Model}{6}
+\contentsline {section}{\numberline {3}Appendix}{7}
+\contentsline {subsection}{\numberline {3.1}Source}{7}
+\contentsline {subsubsection}{\numberline {3.1.1}Source: Question 1}{7}
+\contentsline {subsubsection}{\numberline {3.1.2}Source: Question 2}{11}
+\contentsline {subsection}{\numberline {3.2}Output}{22}
