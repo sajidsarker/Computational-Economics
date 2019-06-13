@@ -6,8 +6,19 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Using Iteration}{4}
 \contentsline {subsubsection}{\numberline {1.2.2}Using Analytical Form}{5}
 \contentsline {section}{\numberline {2}Rust Model}{6}
-\contentsline {section}{\numberline {3}Appendix}{7}
-\contentsline {subsection}{\numberline {3.1}Source}{7}
-\contentsline {subsubsection}{\numberline {3.1.1}Source: Question 1}{7}
-\contentsline {subsubsection}{\numberline {3.1.2}Source: Question 2}{11}
-\contentsline {subsection}{\numberline {3.2}Output}{22}
+\contentsline {subsection}{\numberline {2.1}Maximum Likelihood Estimator}{6}
+\contentsline {subsection}{\numberline {2.2}Value Function Iteration}{6}
+\contentsline {subsubsection}{\numberline {2.2.1}Choice Specific Value Function}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}Integrated Value Function}{8}
+\contentsline {subsubsection}{\numberline {2.2.3}Comparison of Value Function Iterations}{9}
+\contentsline {subsection}{\numberline {2.3}Forward Simulation}{10}
+\contentsline {subsection}{\numberline {2.4}Maximum Likelihood Estimation}{11}
+\contentsline {subsection}{\numberline {2.5}Forward Simulation with Minimised Parameters}{12}
+\contentsline {subsubsection}{\numberline {2.5.1}Long Run Replacement Probabilities}{12}
+\contentsline {subsubsection}{\numberline {2.5.2}Long Run Replacement Probabilities (SS)}{15}
+\contentsline {subsubsection}{\numberline {2.5.3}Counterfactual with Subsidy on Minimised Parameters}{15}
+\contentsline {section}{\numberline {3}Appendix}{16}
+\contentsline {subsection}{\numberline {3.1}Source}{16}
+\contentsline {subsubsection}{\numberline {3.1.1}Source: Question 1}{16}
+\contentsline {subsubsection}{\numberline {3.1.2}Source: Question 2}{20}
+\contentsline {subsection}{\numberline {3.2}Output}{32}

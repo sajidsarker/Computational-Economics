@@ -36,20 +36,20 @@ def RecursiveLoop_ChoiceSpecific(M_V0, parameter):
 
 	# Constructing Iteration Value Vector
 	M_Values = tM_V
-	cout("")
+	#cout("")
 
 	# Test for Convergence
-	cout( "Convergence Test: " + str(np.linalg.norm(M_V0.flatten()-tM_V.flatten())) + " < " + str(parameter[2]) )
+	#cout( "Convergence Test: " + str(np.linalg.norm(M_V0.flatten()-tM_V.flatten())) + " < " + str(parameter[2]) )
 
 	if np.linalg.norm(M_V0.flatten()-tM_V.flatten()) > parameter[2]:
 		# Enter Recursion
 		cout("Convergence Failed ...")
-		cout("Entering Recursion ...")
+		#cout("Entering Recursion ...")
 		M_Values = RecursiveLoop_ChoiceSpecific(tM_V, parameter)
 	else:
 		cout("Convergence Successful ...")
 
-	cout("Collapsing Recursion ...")
+	#cout("Collapsing Recursion ...")
 	return M_Values
 
 def RecursiveLoop_Integrated(v_PR0, v_V0, parameter):
@@ -79,19 +79,19 @@ def RecursiveLoop_Integrated(v_PR0, v_V0, parameter):
 
 	# Constructing Iteration Value Vector
 	M_Values = tM_V
-	cout("")
+	#cout("")
 
-	cout( "Convergence Test: " + str(np.linalg.norm(v_V0.flatten()-tM_V.flatten())) + " < " + str(parameter[2]) )
+	#cout( "Convergence Test: " + str(np.linalg.norm(v_V0.flatten()-tM_V.flatten())) + " < " + str(parameter[2]) )
 
 	if np.linalg.norm(v_V0.flatten()-tM_V.flatten()) > parameter[2]:
 		# Enter Recursion
 		cout("Convergence Failed ...")
-		cout("Entering Recursion ...")
+		#cout("Entering Recursion ...")
 		M_Values, tv_ProbabilityReplacement = RecursiveLoop_Integrated(tv_ProbabilityReplacement, tM_V, parameter)
 	else:
 		cout("Convergence Successful ...")
 
-	cout("Collapsing Recursion ...")
+	#cout("Collapsing Recursion ...")
 	return M_Values, tv_ProbabilityReplacement
 
 def ForwardSimulation_ChoiceSpecific(M_PR0, M_Errors, binomial_seed):
@@ -206,6 +206,8 @@ plt.xlabel("Mileage Realisations")
 plt.ylabel("Value")
 plt.show()
 
+tM_IteratedValues = M_IteratedValues
+
 # Generate Conditional Choice Probabilities
 cout("Conditional Choice Probabilities:")
 M_CCProbability[:, 0] = ConditionalChoice(M_IteratedValues[:, 0], M_IteratedValues[:, 1], 0)
@@ -249,6 +251,15 @@ M_CCProbability = np.append(np.ones( (i_n, 1) ) - M_CCProbability, M_CCProbabili
 cout("[[ x; Pr(i=0|x,theta); Pr(i=1|x,theta); ]]")
 cout(np.append(v_x, M_CCProbability, axis=1))
 cout("")
+
+# Generate Plot Comparison
+cout("Generating Plots ...")
+cout("")
+plt.plot(v_x, M_IteratedValues, v_x, tM_IteratedValues[:, 0])
+plt.title("Comparison of Value Function Iterations")
+plt.xlabel("Mileage Realisations")
+plt.ylabel("Value")
+plt.show()
 
 '''
 '''
@@ -532,7 +543,7 @@ Q = Recursion(p_theta=v_MinimisedTheta, p_beta=0.95, p_lambda=0.8)
 
 cout("(Comparative) Long Run Replacement Probabilities:")
 cout("[[ x; Pr(i=0|x,theta); Pr(i=1|x,theta); ]]")
-cout(np.append(v_x, np.append(np.ones((i_n, 1)) - Q, Q, axis=1), axis=1))
+cout(np.append(v_x, np.append(np.ones((i_n, 1)) - np.reshape(Q, (i_n, 1)), np.reshape(Q, (i_n, 1)), axis=1), axis=1))
 cout("")
 
 '''
